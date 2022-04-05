@@ -1,7 +1,14 @@
 import React from 'react'
 
+const styles = {
+  paperContainer: {
+    height: 1356,
+    backgroundImage: `url(${'static/src/img/main.jpg'})`,
+  },
+}
+
 function About() {
-  return <div>About</div>
+  return <div style={styles.paperContainer}></div>
 }
 
 export default About

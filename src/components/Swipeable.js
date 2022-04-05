@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 import Grid from '@mui/material/Grid'
-import { Typography } from '@mui/material'
+import { Typography, Box } from '@mui/material'
 import Button from '@mui/material/Button'
 
 export default function Slider() {
@@ -20,71 +20,85 @@ export default function Slider() {
 
   return (
     <>
-      <div className="navigation-wrapper">
-        <div ref={sliderRef} className="keen-slider">
-          <div className="keen-slider__slide number-slide1">
-            <Grid container>
-              <Grid item xs={2} md={2}></Grid>
-            </Grid>
-            <Grid container>
-              <Grid item xs={12} md={10}>
-                <Typography variant="h2">Nissan Sport Car</Typography>
-                <Button variant="contained">Buy</Button>
+      <Box sx={{ mr: { sm: 0, lg: 20, md: 0 }, ml: { sm: 0, md: 0, lg: 20 } }}>
+        <div className="navigation-wrapper">
+          <div ref={sliderRef} className="keen-slider">
+            <div className="keen-slider__slide number-slide1">
+              <Grid container>
+                <Grid item xs={2} md={2}></Grid>
               </Grid>
-            </Grid>
-          </div>
-          <div className="keen-slider__slide number-slide2">
-            <Grid container>
-              <Grid item xs={2} md={2}></Grid>
-            </Grid>
-            <Grid container>
-              <Grid item xs={12} md={10}>
-                <Typography variant="h2">Mercedes Sport Car</Typography>
+              <Grid container>
+                <Grid item xs={12} md={10}>
+                  <Typography variant="h5">Nissan Sport Car</Typography>
+                  <Button variant="contained">View</Button>
+                </Grid>
+              </Grid>
+            </div>
+            <div className="keen-slider__slide number-slide2">
+              <Grid container>
+                <Grid item xs={2} md={2}></Grid>
+              </Grid>
+              <Grid container>
+                <Grid item xs={12} md={10}>
+                  <Typography variant="h5">Mercedes Sport Car</Typography>
 
-                <Button variant="contained">Shop Now</Button>
+                  <Button variant="contained">View</Button>
+                </Grid>
               </Grid>
-            </Grid>
+            </div>
+            <div className="keen-slider__slide number-slide3">
+              <Grid container>
+                <Grid item xs={2} md={2}></Grid>
+              </Grid>
+              <Grid container>
+                <Grid item xs={12} md={10}>
+                  <Typography variant="h5">Lambogini Sport Car</Typography>
+
+                  <Button variant="contained">View</Button>
+                </Grid>
+              </Grid>
+            </div>
           </div>
+          {loaded && instanceRef.current && (
+            <>
+              <Arrow
+                left
+                onClick={(e) =>
+                  e.stopPropagation() || instanceRef.current?.prev()
+                }
+                disabled={currentSlide === 0}
+              />
+
+              <Arrow
+                onClick={(e) =>
+                  e.stopPropagation() || instanceRef.current?.next()
+                }
+                disabled={
+                  currentSlide ===
+                  instanceRef.current.track.details.slides.length - 1
+                }
+              />
+            </>
+          )}
         </div>
         {loaded && instanceRef.current && (
-          <>
-            <Arrow
-              left
-              onClick={(e) =>
-                e.stopPropagation() || instanceRef.current?.prev()
-              }
-              disabled={currentSlide === 0}
-            />
-
-            <Arrow
-              onClick={(e) =>
-                e.stopPropagation() || instanceRef.current?.next()
-              }
-              disabled={
-                currentSlide ===
-                instanceRef.current.track.details.slides.length - 1
-              }
-            />
-          </>
+          <div className="dots">
+            {[
+              ...Array(instanceRef.current.track.details.slides.length).keys(),
+            ].map((idx) => {
+              return (
+                <button
+                  key={idx}
+                  onClick={() => {
+                    instanceRef.current?.moveToIdx(idx)
+                  }}
+                  className={'dot' + (currentSlide === idx ? ' active' : '')}
+                ></button>
+              )
+            })}
+          </div>
         )}
-      </div>
-      {loaded && instanceRef.current && (
-        <div className="dots">
-          {[
-            ...Array(instanceRef.current.track.details.slides.length).keys(),
-          ].map((idx) => {
-            return (
-              <button
-                key={idx}
-                onClick={() => {
-                  instanceRef.current?.moveToIdx(idx)
-                }}
-                className={'dot' + (currentSlide === idx ? ' active' : '')}
-              ></button>
-            )
-          })}
-        </div>
-      )}
+      </Box>
     </>
   )
 }

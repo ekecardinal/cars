@@ -8,6 +8,15 @@ const useStyles = makeStyles((theme) => ({
   tabLeft: {
     marginLeft: 'auto',
   },
+  logo: {
+    height: '3em',
+    [theme.breakpoints.down('md')]: {
+      height: '1.5em',
+    },
+    [theme.breakpoints.down('xs')]: {
+      height: '0.8em',
+    },
+  },
 }))
 
 export const Navbar = () => {
@@ -31,9 +40,14 @@ export const Navbar = () => {
     <AppBar position="static" color="secondary">
       <Box sx={{ mr: { sm: 0, lg: 20, md: 0 }, ml: { sm: 0, md: 0, lg: 20 } }}>
         <Toolbar>
-          <img src="../logo.png" alt="company logo" />
-
-          <Tabs sx={{ ml: 'auto' }}>
+          <a href="/">
+            <img
+              src="../logo.png"
+              alt="company logo"
+              className={classes.logo}
+            />
+          </a>
+          <Tabs sx={{ ml: 'auto' }} value={value} onChange={handleChange}>
             <Tab label="Home" component={Link} to="/" />
             <Tab label="About" component={Link} to="/about" />
           </Tabs>
