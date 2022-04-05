@@ -8,7 +8,7 @@ const styles = {
 }
 
 function About() {
-  return <div style={styles.paperContainer}></div>
+  return <div style={styles.paperContainer}>working on it</div>
 }
 
 export default About
