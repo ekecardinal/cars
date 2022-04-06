@@ -4,6 +4,7 @@ import theme from './components/Theme'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
+import Footer from './components/footer'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/about" element={<About />} />
         </Routes>
+        <Footer />
       </Router>
     </ThemeProvider>
   )

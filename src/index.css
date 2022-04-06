@@ -9,25 +9,31 @@
   font-weight: 500;
   height: 80vh;
   max-height: 100vh;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
 
 .number-slide1 {
-  background-image: url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=983&q=80');
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/312/835/625/car-mercedes-vehicle-race-wallpaper-preview.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: soft-light;
 }
 
 .number-slide2 {
-  background-image: url('https://images.unsplash.com/photo-1575225929311-30a188430dec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/327/192/923/nissan-skyline-gt-r-nissan-skyline-gt-r-r34-car-vehicle-wallpaper-preview.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: soft-light;
 }
 
 .number-slide3 {
-  background-image: url('https://images.unsplash.com/photo-1570280406792-bf58b7c59247?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=862&q=80');
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/523/161/186/car-stance-mercedes-benz-sls-amg-futuristic-wallpaper-preview.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: soft-light;
 }
 
 .number-slide4 {
@@ -90,4 +96,19 @@
 
 .arrow--disabled {
   fill: rgba(255, 255, 255, 0.5);
+}
+
+.bg {
+  /* The image used */
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/404/106/480/vehicles-pogea-racing-fplus-corsa-car-red-car-wallpaper-preview.jpg');
+
+  /* Full height */
+  height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: soft-light;
 }

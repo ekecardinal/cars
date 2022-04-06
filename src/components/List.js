@@ -9,23 +9,25 @@ export default function TitlebarBelowImageList() {
       sx={{
         display: 'flex',
         flexWrap: 'wrap',
+
         justifyContent: 'center',
         '& > :not(style)': {
-          m: '1.5em',
-          width: 450,
-          height: 328,
+          m: '0.5em',
+          width: 350,
+          height: 300,
         },
       }}
     >
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
           <img
+            sx={{ borderRadius: 2 }}
             src={`${item.img}?w=248&fit=crop&auto=format`}
             srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
             alt={item.title}
             loading="lazy"
           />
-          <ImageListItemBar title={item.title} />
+          <ImageListItemBar title={item.title} position="below" />
         </ImageListItem>
       ))}
     </ImageList>
@@ -34,62 +36,51 @@ export default function TitlebarBelowImageList() {
 
 const itemData = [
   {
-    img: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=983&q=80',
-    title: 'Nissan',
+    img: 'https://c4.wallpaperflare.com/wallpaper/559/911/736/auto-dust-sport-machine-race-hd-wallpaper-preview.jpg',
+    title: 'Auto, Dust, Sport, Machine, Race, Skid, Hyundai, Car, WRC, Rally',
   },
   {
-    img: 'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-    title: 'Mercedes',
-    author: '@rollelflex_graphy726',
+    img: 'https://c4.wallpaperflare.com/wallpaper/383/498/337/911-porsche-car-race-wallpaper-preview.jpg',
+    title: 'P911, Porsche, Car, Race, RWB',
   },
   {
-    img: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=983&q=80',
-    title: 'Lambo',
-    author: '@helloimnik',
+    img: 'https://c4.wallpaperflare.com/wallpaper/936/347/652/lamborghini-car-lamborghini-aventador-wallpaper-preview.jpg',
+    title: ' Lamborghini Aventador',
   },
   {
-    img: 'https://images.unsplash.com/photo-1570280406793-fb05bcb5d395?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-    title: 'Ferari',
-    author: '@nolanissac',
+    img: 'https://c4.wallpaperflare.com/wallpaper/253/181/284/porsche-917-spa-francorchamps-race-cars-racing-race-tracks-hd-wallpaper-preview.jpg',
+    title: 'Porsche 917, Spa Francorchamps, race cars, racing,',
   },
   {
-    img: 'https://images.unsplash.com/photo-1570828970875-e5d500c45193?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-    title: 'Bens',
-    author: '@hjrc33',
+    img: 'https://c4.wallpaperflare.com/wallpaper/11/690/342/khyzyl-saleem-car-bmw-m6-bmw-wallpaper-preview.jpg',
+    title: 'BMW M6, render, artwork, Stanceworks',
   },
   {
-    img: 'https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-    title: 'Toyota',
-    author: '@arwinneil',
+    img: 'https://c4.wallpaperflare.com/wallpaper/583/659/668/sport-car-racing-porsche-911-rsr-wallpaper-preview.jpg',
+    title: 'sport car, racing, Porsche 911 RSR',
   },
   {
-    img: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=983&q=80',
-    title: 'Cars',
-    author: '@tjdragotta',
+    img: 'https://c4.wallpaperflare.com/wallpaper/150/745/283/car-ferrari-red-car-luxury-vehicle-wallpaper-preview.jpg',
+    title: 'ferrari, red car, luxury vehicle, sports car',
   },
   {
-    img: 'https://images.unsplash.com/photo-1559384403-c23988dd4219?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-    title: 'Ferari',
-    author: '@katie_wasserman',
+    img: 'https://c4.wallpaperflare.com/wallpaper/244/1015/716/4k-lightning-mcqueen-8k-wallpaper-preview.jpg',
+    title: 'Lightning McQueen, 8K, car',
   },
   {
-    img: 'https://images.unsplash.com/photo-1592853625597-7d17be820d0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=875&q=80',
-    title: 'Range Rover',
-    author: '@silverdalex',
+    img: 'https://c4.wallpaperflare.com/wallpaper/1017/368/874/car-mazda-mazda-787b-race-cars-wallpaper-preview.jpg',
+    title: 'mazda 787b, race cars, Super Car, Le Mans',
   },
   {
-    img: 'https://images.unsplash.com/photo-1522120177514-2b16ebe5634d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-    title: 'Honda',
-    author: '@shelleypauls',
+    img: 'https://c4.wallpaperflare.com/wallpaper/397/880/29/2017-911-car-porsche-wallpaper-preview.jpg',
+    title: '2017, 911, car, porsche, race',
   },
   {
-    img: 'https://images.unsplash.com/photo-1521410195597-69e2218fcee8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
-    title: 'Bens',
-    author: '@peterlaster',
+    img: 'https://c4.wallpaperflare.com/wallpaper/591/369/117/car-vehicle-mclaren-p1-mclaren-wallpaper-preview.jpg',
+    title: 'black sports car, vehicle, McLaren P1',
   },
   {
-    img: 'https://images.unsplash.com/photo-1484509831184-71bac0c48248?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80',
-    title: 'Bike',
-    author: '@southside_customs',
+    img: 'https://c4.wallpaperflare.com/wallpaper/643/74/422/nissan-turbo-white-drift-wallpaper-preview.jpg',
+    title: 'white coupe, nissan, turbo',
   },
 ]

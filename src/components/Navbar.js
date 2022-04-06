@@ -29,11 +29,12 @@ export const Navbar = () => {
   }
 
   useEffect(() => {
-    if (window.location.pathname === '/' && value !== 0) {
+    if (window.location.pathname === '/about' && value !== 0) {
       setValue(0)
-    } else if (window.location.pathname === '/about' && value !== 1) {
-      setValue(1)
     }
+    // else if (window.location.pathname === '/about' && value !== 1) {
+    //   setValue(1)
+    // }
   }, [value])
 
   return (
@@ -48,7 +49,7 @@ export const Navbar = () => {
             />
           </a>
           <Tabs sx={{ ml: 'auto' }} value={value} onChange={handleChange}>
-            <Tab label="Home" component={Link} to="/" />
+            {/* <Tab label="Home" component={Link} to="/" /> */}
             <Tab label="About" component={Link} to="/about" />
           </Tabs>
         </Toolbar>
