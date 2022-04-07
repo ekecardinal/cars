@@ -9,11 +9,12 @@ export default function TitlebarBelowImageList() {
       sx={{
         display: 'flex',
         flexWrap: 'wrap',
-
+        mr: { sm: 0, lg: 20, md: 0 },
+        ml: { sm: 0, md: 0, lg: 20 },
         justifyContent: 'center',
         '& > :not(style)': {
-          m: '0.5em',
-          width: 350,
+          m: '0.3em',
+          width: 300,
           height: 300,
         },
       }}
@@ -45,7 +46,7 @@ const itemData = [
   },
   {
     img: 'https://c4.wallpaperflare.com/wallpaper/936/347/652/lamborghini-car-lamborghini-aventador-wallpaper-preview.jpg',
-    title: ' Lamborghini Aventador',
+    title: 'Lamborghini Aventador',
   },
   {
     img: 'https://c4.wallpaperflare.com/wallpaper/253/181/284/porsche-917-spa-francorchamps-race-cars-racing-race-tracks-hd-wallpaper-preview.jpg',
@@ -61,7 +62,7 @@ const itemData = [
   },
   {
     img: 'https://c4.wallpaperflare.com/wallpaper/150/745/283/car-ferrari-red-car-luxury-vehicle-wallpaper-preview.jpg',
-    title: 'ferrari, red car, luxury vehicle, sports car',
+    title: 'Ferrari, red car, luxury vehicle, sports car',
   },
   {
     img: 'https://c4.wallpaperflare.com/wallpaper/244/1015/716/4k-lightning-mcqueen-8k-wallpaper-preview.jpg',
@@ -69,11 +70,11 @@ const itemData = [
   },
   {
     img: 'https://c4.wallpaperflare.com/wallpaper/1017/368/874/car-mazda-mazda-787b-race-cars-wallpaper-preview.jpg',
-    title: 'mazda 787b, race cars, Super Car, Le Mans',
+    title: 'Mazda 787b, race cars, Super Car, Le Mans',
   },
   {
     img: 'https://c4.wallpaperflare.com/wallpaper/397/880/29/2017-911-car-porsche-wallpaper-preview.jpg',
-    title: '2017, 911, car, porsche, race',
+    title: '2017, 911, car, Porsche, race',
   },
   {
     img: 'https://c4.wallpaperflare.com/wallpaper/591/369/117/car-vehicle-mclaren-p1-mclaren-wallpaper-preview.jpg',
@@ -81,6 +82,6 @@ const itemData = [
   },
   {
     img: 'https://c4.wallpaperflare.com/wallpaper/643/74/422/nissan-turbo-white-drift-wallpaper-preview.jpg',
-    title: 'white coupe, nissan, turbo',
+    title: 'white coupe, Nissan, turbo',
   },
 ]

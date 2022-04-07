@@ -20,7 +20,7 @@ function About() {
           <Grid item xs={10} md={4} mt={{ lg: 8, md: 4, sm: 2 }} color="white">
             <Typography variant="h5">About</Typography>
             <br />
-            <Typography className="typo">
+            <Typography className="body2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
               saepe vero laboriosam! Optio explicabo ex ratione recusandae quas
               cupiditate consectetur omnis deserunt facere quibusdam, sint

@@ -37,7 +37,18 @@ export default function Slider() {
                 <Grid container>
                   <Grid item xs={12} md={12}>
                     <Typography variant="h2">Mercedes</Typography>
-                    <Button variant="contained">View</Button>
+                    <Button
+                      variant="contained"
+                      sx={{ mt: 3, mb: 2, pr: 4, pl: 4 }}
+                    >
+                      <Typography
+                        backgroundColor="secondary"
+                        textTransform="none"
+                        variant="body1"
+                      >
+                        View
+                      </Typography>
+                    </Button>
                   </Grid>
                 </Grid>
               </div>
@@ -49,7 +60,18 @@ export default function Slider() {
                   <Grid item xs={12} md={10}>
                     <Typography variant="h2">Nissan Skyline</Typography>
 
-                    <Button variant="contained">View</Button>
+                    <Button
+                      variant="contained"
+                      sx={{ mt: 3, mb: 2, pr: 4, pl: 4 }}
+                    >
+                      <Typography
+                        backgroundColor="secondary"
+                        textTransform="none"
+                        variant="body1"
+                      >
+                        View
+                      </Typography>
+                    </Button>
                   </Grid>
                 </Grid>
               </div>
@@ -61,10 +83,42 @@ export default function Slider() {
                   <Grid item xs={12} md={10}>
                     <Typography variant="h2">Mercedes</Typography>
 
-                    <Button variant="contained">View</Button>
+                    <Button
+                      variant="contained"
+                      sx={{ mt: 3, mb: 2, pr: 4, pl: 4 }}
+                    >
+                      <Typography
+                        backgroundColor="secondary"
+                        textTransform="none"
+                        variant="body1"
+                      >
+                        View
+                      </Typography>
+                    </Button>
                   </Grid>
                 </Grid>
               </div>
+              {loaded && instanceRef.current && (
+                <div className="dots">
+                  {[
+                    ...Array(
+                      instanceRef.current.track.details.slides.length
+                    ).keys(),
+                  ].map((idx) => {
+                    return (
+                      <button
+                        key={idx}
+                        onClick={() => {
+                          instanceRef.current?.moveToIdx(idx)
+                        }}
+                        className={
+                          'dot' + (currentSlide === idx ? ' active' : '')
+                        }
+                      ></button>
+                    )
+                  })}
+                </div>
+              )}
             </div>
             {loaded && instanceRef.current && (
               <>
@@ -88,25 +142,6 @@ export default function Slider() {
               </>
             )}
           </div>
-          {loaded && instanceRef.current && (
-            <div className="dots">
-              {[
-                ...Array(
-                  instanceRef.current.track.details.slides.length
-                ).keys(),
-              ].map((idx) => {
-                return (
-                  <button
-                    key={idx}
-                    onClick={() => {
-                      instanceRef.current?.moveToIdx(idx)
-                    }}
-                    className={'dot' + (currentSlide === idx ? ' active' : '')}
-                  ></button>
-                )
-              })}
-            </div>
-          )}
         </Box>
       </ThemeProvider>
     </>

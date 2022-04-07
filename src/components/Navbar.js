@@ -32,13 +32,10 @@ export const Navbar = () => {
     if (window.location.pathname === '/about' && value !== 0) {
       setValue(0)
     }
-    // else if (window.location.pathname === '/about' && value !== 1) {
-    //   setValue(1)
-    // }
   }, [value])
 
   return (
-    <AppBar position="static" color="secondary">
+    <AppBar position="sticky" color="secondary">
       <Box sx={{ mr: { sm: 0, lg: 20, md: 0 }, ml: { sm: 0, md: 0, lg: 20 } }}>
         <Toolbar>
           <a href="/">
@@ -50,7 +47,12 @@ export const Navbar = () => {
           </a>
           <Tabs sx={{ ml: 'auto' }} value={value} onChange={handleChange}>
             {/* <Tab label="Home" component={Link} to="/" /> */}
-            <Tab label="About" component={Link} to="/about" />
+            <Tab
+              label="About"
+              sx={{ textTransform: 'none' }}
+              component={Link}
+              to="/about"
+            />
           </Tabs>
         </Toolbar>
       </Box>

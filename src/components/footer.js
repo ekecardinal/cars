@@ -1,5 +1,4 @@
 import * as React from 'react'
-import PropTypes from 'prop-types'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
@@ -10,7 +9,7 @@ function Copyright() {
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="/">
-        Your Website
+        Sport Cars
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -20,28 +19,18 @@ function Copyright() {
 
 function Footer(props) {
   return (
-    <Box component="footer" sx={{ bgcolor: 'background.paper', py: 6 }}>
+    <Box
+      component="footer"
+      sx={{ bgcolor: 'background.paper', py: 6, boxShadow: 3, mt: 1 }}
+    >
       <Container maxWidth="lg">
         <Typography variant="h6" align="center" gutterBottom>
           Sport Cars
         </Typography>
-        {/* <Typography
-          variant="subtitle1"
-          align="center"
-          color="text.secondary"
-          component="p"
-        >
-          Top Sport Cars
-        </Typography> */}
         <Copyright />
       </Container>
     </Box>
   )
-}
-
-Footer.propTypes = {
-  description: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
 }
 
 export default Footer
